@@ -32,3 +32,20 @@ zookeeper:
       - type: support
         title: Submit a Support Request
         link: https://d2iq.com/services-and-support
+minecraft:
+  display_name: Minecraft
+  description: Minecraft Server
+  logo:
+  category: game
+  overview: minecraft/overview.md
+  resources:
+    provider:
+      title: Minecraft
+      link: https://minecraft.net
+    links:
+      - type: resources
+        title: Documentation
+        link: https://hub.docker.com/r/itzg/minecraft-server/~/dockerfile/
+      - type: support
+        title: Submit a Support Request
+        link: https://d2iq.com/services-and-support
