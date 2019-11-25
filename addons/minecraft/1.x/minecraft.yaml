@@ -1,0 +1,35 @@
+---
+apiVersion: kubeaddons.mesosphere.io/v1beta1
+kind: Addon
+metadata:
+  name: minecraft
+  namespace: kubeaddons
+  labels:
+    kubeaddons.mesosphere.io/name: minecraft
+    # TODO: we're temporarily supporting dependency on an existing default storage class
+    # on the cluster, this hack will trigger re-queue on Addons until one exists.
+    kubeaddons.mesosphere.io/hack-requires-defaultstorageclass: "true"
+  annotations:
+    # The version of Minecraft deployed by this chart is:
+    # (catalog requires the -N where N is the package release of the addon)
+    catalog.kubeaddons.mesosphere.io/addon-revision: "1.14.4-1"
+    appversion.kubeaddons.mesosphere.io/minecraft: "1.14.4"
+    # This url is used by kommander to display a link to the documentation
+    docs.kubeaddons.mesosphere.io/minecraft: "https://hub.docker.com/r/itzg/minecraft-server/~/dockerfile/"
+    # These are the raw values for this chart. It is expected that these chart values will be well documented
+    # in-line.
+    values.chart.helm.kubeaddons.mesosphere.io/minecraft: "https://raw.githubusercontent.com/helm/charts/master/stable/minecraft/values.yaml"
+spec:
+  kubernetes:
+    minSupportedVersion: v1.15.0
+  cloudProvider:
+  requires:
+  chartReference:
+    chart: stable/minecraft
+    version: 1.1.6
+    values: |
+      ---
+      minecraftServer:
+        eula: "TRUE"
+        viewDistance: 50
+
