@@ -6,4 +6,4 @@ metadata:
 spec:
   priority: "1"
   url: "https://github.com/clucca/kubeaddons-enterprise"
-  ref: "v0.0.3"
+  ref: "master"
