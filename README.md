@@ -29,7 +29,8 @@ metadata:
 spec:
   priority: "1"
   ref: master
-  url: <url of your github forked repo>
+  url: 
+  <url of your github forked repo>
     
   
   
