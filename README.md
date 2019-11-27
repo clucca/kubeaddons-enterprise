@@ -30,6 +30,7 @@ spec:
   priority: "1"
   ref: master
   url: <url of your github forked repo>
+    
   
   
  6.) Apply the  yaml against the namespace of your project
