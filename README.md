@@ -30,7 +30,7 @@ spec:
   priority: "1"
   ref: master
   url: 
-  <url of your github forked repo>
+  <<<<url of your github forked repo>>>>
     
   
   
